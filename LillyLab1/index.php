@@ -29,9 +29,6 @@
                         <li><h3><a href="index.htm">Home</a> </h3></li>
                         <li><h3><a href="resume.htm">Resume</a></h3></li>
                         <li><h3><a href="interests.htm">Interests</a></h3></li>
-                        <!--<li><h3><a href="blog.htm">Blog</a></h3></li> -->
-                        <li><h3><a href="projects.htm">Projects</a></h3></li>
-                        <!-- <li><h3><a href="donate.htm">Donate</a></h3></li> -->
                     </ul>
                 </nav>
 
@@ -44,16 +41,6 @@
                 <div class="clear"></div>
 
                 <footer class="w3-container">
-
-                    <figure>
-                        <img src="img/Myriad.png" alt="myriad" class="left" width="100"/>
-                            <figcaption>
-                                <strong>
-                                    Co-Owner of Myriad Gaming
-                                    Established Since 2018
-                                </strong>
-                            </figcaption>
-                    </figure>
 
                 </footer>
 
