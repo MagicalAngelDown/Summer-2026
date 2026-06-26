@@ -1,13 +1,13 @@
 <?php
 $pageTitle = "About the Lilly Family";
 require_once "_header.php";
-?>
+?>            
 
 <main class="container">
-    <link rel="stylesheet" href="Interactive_about.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="Interactive.css" />
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
             <script defer src="jquery_script.js"></script>
-    <script defer src="script.js"></script>
+
             <section id="accordion" class="card">
                 <h2>About the Lilly Family</h2>
                 <div class="accordion">

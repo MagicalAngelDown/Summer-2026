@@ -1,5 +1,5 @@
 :root {
-    --bg: #0f1220;
+    /* --bg: #0f1220; */
     --card: #151a2e;
     --text: #e8ecff;
     --muted: #602b92;
@@ -16,9 +16,14 @@ body {
     margin: 0;
     font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     color: var(--text);
-    background: radial-gradient(1200px 600px at 10% -10%, rgba(139,92,246,0.15), transparent 60%),
+    /* background: radial-gradient(1200px 600px at 10% -10%, rgba(139,92,246,0.15), transparent 60%),
     radial-gradient(800px 500px at 110% 0%, rgba(34,211,238,0.12), transparent 60%),
-    var(--bg);
+    var(--bg); */
+    background-image:url("img/background_AWD.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
 }
 
 .site-header, .site-footer { text-align: center; padding: 1.25rem; }

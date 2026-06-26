@@ -1,0 +1,75 @@
+[
+  {
+    "id": "home-rebuild",
+    "title": "Website Rebuild",
+    "category": "Web Development",
+    "status": "In Progress",
+    "description": "Rebuilding the website structure and styling so the site matches the assignment requirements and has a cleaner overall design.",
+    "link": "index.php"
+  },
+  {
+    "id": "portfolio-page",
+    "title": "Portfolio Page",
+    "category": "Portfolio",
+    "status": "In Progress",
+    "description": "A portfolio page that displays GitHub projects and links visitors to completed work.",
+    "link": "portfolio.php"
+  },
+  {
+    "id": "interests-page",
+    "title": "Interests Page",
+    "category": "Personal",
+    "status": "Planned",
+    "description": "A personal interests page about gaming, streaming, photography, crocheting, gardening, reading, music, pets, and family activities.",
+    "link": "interests.php"
+  },
+  {
+    "id": "family-about",
+    "title": "About the Lilly Family",
+    "category": "Personal",
+    "status": "In Progress",
+    "description": "An interactive page with an accordion, tabs, and a family slideshow featuring the Lilly family.",
+    "link": "interactiveabout.php"
+  },
+  {
+    "id": "madlibs-game",
+    "title": "Old MadLibs Game needing a rebuild",
+    "category": "Web Games",
+    "status": "Planned",
+    "description": "A old project I would Like to revamp and create since I have learned so much more.",
+    "link": "Madlibs.php"
+  },
+  {
+    "id": "myriad-gaming",
+    "title": "Myriad Gaming Community",
+    "category": "Web Development",
+    "status": "Planned",
+    "description": "A gaming community with around 2000 members and active game servers for Garry's Mod, Minecraft, and Project Zomboid.",
+    "link": "404.php"
+  },
+  {
+    "id": "resume-addition",
+    "title": "Resume Addition",
+    "category": "Personal",
+    "status": "Planned",
+    "technology": "PHP, HTML, CSS",
+    "description": "A planned website section for adding a resume, certifications, accomplishments, and professional development details.",
+    "link": "portfolio.php"
+  },
+  {
+    "id": "contact-form",
+    "title": "Contact Form",
+    "category": "Personal",
+    "status": "Planned",
+    "description": "A contact form that collects user input and sends it to a specified email address.",
+    "link": "404.php"
+  },
+  {
+    "id": "non-profit-website",
+    "title": "Non-Profit Website for Customer",
+    "category": "Web Development",
+    "status": "Planned",
+    "description": "A non-profit website for a customer. The website will include information about the organization, its mission, and how to get involved.",
+    "link": "nonprofit.php"
+  }
+]

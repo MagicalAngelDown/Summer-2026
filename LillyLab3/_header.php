@@ -17,7 +17,7 @@
 
                 <header class="w3-container" >
                     <div class="headerbg w3-card-4">
-                        <h1>Brooke Lilly</h1>
+                        <h1><strong>Brooke Lilly</strong></h1>
                     </div>
                 </header>
 
@@ -26,9 +26,10 @@
                 <nav class="w3-container">
                     <ul>
                         <li><h3><a href="index.php">Home</a> </h3></li>
-                        <li><h3><a href="portfolio.php">Portfolio</a></h3></li>
+                        <li><h3><a href="portfolio.php">Project Timeline and Portfolio</a></h3></li>
                         <li><h3><a href="interests.php">Interests</a></h3></li>
                         <li><h3><a href="interactiveabout.php">About the Lilly Family</a></h3></li>
+                        <li><h3><a href="categories.php">Project Categories</a></h3></li>
                     </ul>
                 </nav>
 

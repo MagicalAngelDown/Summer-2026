@@ -23,7 +23,7 @@ $(function () {
         $headers.on("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openPanel($(this)); }
     });
-
+    
     /* ------------------
     * Tabs
     * ------------------ */

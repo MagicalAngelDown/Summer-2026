@@ -1,55 +1,29 @@
 <?php
 $pageTitle = "Home";
+
+// Read the JSON file before the page displays.
+$jsonFile = __DIR__ . "/siteData.json";
+$projects = [];
+$errorMessage = "";
+
+if (file_exists($jsonFile)) {
+    $jsonText = file_get_contents($jsonFile);
+    $projects = json_decode($jsonText, true);
+
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        $projects = [];
+        $errorMessage = "The project data could not be decoded.";
+    }
+} else {
+    $errorMessage = "The project data file could not be found.";
+}
+
 require_once "_header.php";
 ?>
 
                 <main class="w3-container">
                     <h1>Welcome to My Website</h1>
                     <p>This is going to be my playground for experimenting with web development! Although I will be using this website to showcase my work, creativity and will link other websites I have already made.</p>
-
-
-                    <h3>Project Timeline</h3>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Project</th>
-                                    <th>Status</th>
-                                    <th>Goal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Rebuilding</td>
-                                    <td>In Progress</td>
-                                    <td>Rebuilding this skeleton to match this assignment and same with Styles.CSS</td>
-                                </tr>
-                                <tr>
-                                    <td>Portfolio</td>
-                                    <td>Finished</td>
-                                    <td>Adding more content, such as my personal website which is already published and our gaming website.</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleaning up Website</td>
-                                    <td>In Progress</td>
-                                    <td>Fixing any remaining issues and improving the overall look and feel of the website.</td>
-                                </tr>
-                                <tr>
-                                    <td>Interests Page</td>
-                                    <td>Planned</td>
-                                    <td>Adding an interests page that is more in depth than the one in my website.</td>
-                                </tr>
-                                 <tr>
-                                    <td>Combining</td>
-                                    <td>In Progress</td>
-                                    <td>Combining this and my webpage that is already published.</td>
-                                </tr>
-                                <tr>
-                                    <td>Resume Adding</td>
-                                    <td>Planned</td>
-                                    <td>Adding my resume to the website. With all certifications and accomplishments.</td>
-                                </tr>
-                            </tbody>
-                        </table>
 
                     <h3>Skills</h3>
                     <p>Here are some of the skills I have developed:</p>
@@ -80,6 +54,71 @@ require_once "_header.php";
 
                             <img src="img/cuddlePile.png" alt="Family Picture Cuddles">
                         </aside>
+                    </section>
+
+                    <section class="project-timeline">
+                        <h2>Project Timeline</h2>
+
+                        <?php if ($errorMessage !== ""): ?>
+
+                            <div class="alert alert-warning" role="alert">
+                                <?= htmlspecialchars($errorMessage) ?>
+                            </div>
+
+                        <?php elseif (empty($projects)): ?>
+
+                            <p>No projects were found.</p>
+
+                        <?php else: ?>
+
+                            <div class="row">
+                                <?php foreach ($projects as $project): ?>
+                                    <article class="col-md-6 mb-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+
+                                                <h3 class="card-title">
+                                                    <?= htmlspecialchars($project["title"] ?? "Untitled Project") ?>
+                                                </h3>
+
+                                                <p>
+                                                    <strong>ID:</strong>
+                                                    <?= htmlspecialchars($project["id"] ?? "Not listed") ?>
+                                                </p>
+
+                                                <p>
+                                                    <strong>Category:</strong>
+                                                    <?= htmlspecialchars($project["category"] ?? "Not listed") ?>
+                                                </p>
+
+                                                <p>
+                                                    <strong>Status:</strong>
+                                                    <?= htmlspecialchars($project["status"] ?? "Not listed") ?>
+                                                </p>
+
+                                                <p>
+                                                    <strong>Description:</strong>
+                                                    <?= htmlspecialchars($project["description"] ?? "No description provided.") ?>
+                                                </p>
+
+                                                <p>
+                                                    <strong>Link:</strong>
+                                                    <?php if (!empty($project["link"])): ?>
+                                                        <a href="<?= htmlspecialchars($project["link"]) ?>">
+                                                            <?= htmlspecialchars($project["link"]) ?>
+                                                        </a>
+                                                    <?php else: ?>
+                                                        Not available yet
+                                                    <?php endif; ?>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </article>
+                                <?php endforeach; ?>
+                            </div>
+
+                        <?php endif; ?>
                     </section>
                         
                 </main>
